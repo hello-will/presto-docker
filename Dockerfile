@@ -13,6 +13,7 @@ RUN apk add --no-cache bash python curl less && \
 RUN chmod a+x /usr/local/bin/presto
 
 COPY docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 8080
